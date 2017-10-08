@@ -18,11 +18,6 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String test() {
-		return "ljhgksdfjgsdf";
-	}
-	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Product> getProductById(@PathVariable Long id) {
 		Product product = productService.getProductById(id);

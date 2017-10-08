@@ -26,7 +26,7 @@ public class ProductControllerTest {
 	ObjectMapper mapper = new ObjectMapper();
 
 	@Test
-	public void testGetCountries() throws JsonProcessingException {
+	public void getProductById() throws JsonProcessingException {
 		ResponseEntity<Product> product = productController.getProductById(13860428L);
 		Assert.assertEquals("The Big Lebowski (Blu-ray)", product.getBody().getName());
 		System.out.println(mapper.writeValueAsString(product));
