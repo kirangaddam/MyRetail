@@ -11,14 +11,19 @@ import org.springframework.web.bind.annotation.RestController;
 import com.myRetail.bean.Product;
 import com.myRetail.service.ProductService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping(value="/product")
+@Api(value="MyRetail", description="MyRetail API Services")
 public class ProductController {
 
 	@Autowired
 	private ProductService productService;
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	@ApiOperation(value = "Get Product Details By Id")
 	public ResponseEntity<Product> getProductById(@PathVariable Long id) {
 		Product product = productService.getProductById(id);
 		if(product == null) {
