@@ -12,8 +12,6 @@
 	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate" />
 	
 	<bean class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" />
-	<mvc:resources location="classpath:/META-INF/resources/" mapping="swagger-ui.html"></mvc:resources>
-  	<mvc:resources location="classpath:/META-INF/resources/webjars/" mapping="/webjars/**"></mvc:resources>
   	
   	<mongo:mongo host="127.0.0.1" port="27017" />
 	<mongo:db-factory dbname="mydb" />
