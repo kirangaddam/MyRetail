@@ -26,7 +26,7 @@ public class Product{
 		this.currentPrice = currentPrice;
 	}
 
-	private static class CurrentPrice {
+	public static class CurrentPrice {
 		private BigDecimal value;
 		private String currencyCode;
 		public BigDecimal getValue() {
